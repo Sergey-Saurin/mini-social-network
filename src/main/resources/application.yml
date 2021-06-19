@@ -1,0 +1,41 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost
+    username: test
+    password: test
+    driverClassName: org.postgresql.Driver
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mail@gmail.com
+    password: test
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      ssl.trust: smtp.gmail.com
+server:
+  port: 8086
+  servlet:
+    contextPath: /api/v1
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+    root: INFO
+    skillbox: TRACE
+
+cloudinary:
+  url: cloudinary://testtest
+
+front:
+  host: http://localhost:8080

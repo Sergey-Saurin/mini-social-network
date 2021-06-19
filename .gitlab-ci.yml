@@ -1,0 +1,15 @@
+image: maven:3.6.3-jdk-11
+
+variables:
+    MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+    paths:
+        - .m2/repository
+
+
+Build project:
+    stage: build
+    script:
+        - mvn $MAVEN_OPTS compile
+
